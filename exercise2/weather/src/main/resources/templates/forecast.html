@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forecast</title>
+    <style>
+        #container {
+            width: 100%;
+
+        }
+        #location {
+            width: 100%;
+            text-align: center;
+        }
+        #forecast {
+            width: 100%;
+            display: flex;
+            align-content: space-between;
+        }
+        #forecast > div {
+            width: 33%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="location">
+            <h2 th:text="'City: ' + ${info.getLocation().getCity()}"></h2>
+            <h3 th:text="'Country: ' + ${info.getLocation().getCountry()}"></h3>
+            <p th:text="'Average temperature: ' + ${info.getAvgTemp()} + '°C'"></p>
+        </div>
+        <div id="forecast">
+            <div>
+                <h2 th:text="${info.getForecast()[0].getDate()}"></h2>
+                <h1 th:text="'Temperature: ' + ${info.getForecast()[0].getTemperature()} + '°C'"></h1>
+                <p th:text="${info.getForecast()[0].getCondition()}"></p>
+                <img th:src="${info.getForecast()[0].getConditionIcon()}" th:alt="${info.getForecast()[0].getCondition()}">
+                <p th:text="'Humidity: ' + ${info.getForecast()[0].getHumidity()} + '%'"></p>
+            </div>
+            <div>
+                <h2 th:text="${info.getForecast()[1].getDate()}"></h2>
+                <h1 th:text="'Temperature: ' + ${info.getForecast()[1].getTemperature()} + '°C'"></h1>
+                <p th:text="${info.getForecast()[1].getCondition()}"></p>
+                <img th:src="${info.getForecast()[1].getConditionIcon()}" th:alt="${info.getForecast()[1].getCondition()}">
+                <p th:text="'Humidity: ' + ${info.getForecast()[1].getHumidity()} + '%'"></p>
+            </div>
+            <div>
+                <h2 th:text="${info.getForecast()[2].getDate()}"></h2>
+                <h1 th:text="'Temperature: ' + ${info.getForecast()[2].getTemperature()} + '°C'"></h1>
+                <p th:text="${info.getForecast()[2].getCondition()}"></p>
+                <img th:src="${info.getForecast()[2].getConditionIcon()}" th:alt="${info.getForecast()[2].getCondition()}">
+                <p th:text="'Humidity: ' + ${info.getForecast()[2].getHumidity()} + '%'"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

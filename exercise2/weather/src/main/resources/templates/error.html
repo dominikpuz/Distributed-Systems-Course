@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error</title>
+    <style>
+        div {
+            display: flex;
+            width: 100%;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+        div > * {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 th:text="'Error ' + ${error.getErrorCode()}"></h1>
+        <h2 th:text="${error.getErrorMessage()}"></h2>
+    </div>
+</body>
+</html>
