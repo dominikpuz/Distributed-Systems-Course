@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package pl.agh.edu.gen;
+
+message ExecutionRequest {
+    string method = 1;
+    string jarLocation = 2;
+    string data = 3;
+}
+
+message ExecutionResponse {
+    string data = 1;
+}
+
+service ExecutionService {
+    rpc execute(ExecutionRequest) returns (ExecutionResponse) {}
+}
