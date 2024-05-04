@@ -1,0 +1,17 @@
+SmartHome1.Camera=SmartHome/Camera: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+SmartHome1.NightCamera=SmartHome/NightCamera: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+SmartHome1.Light=SmartHome/Light: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+SmartHome1.RGBLight=SmartHome/RGBLight: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+SmartHome1.SequenceLight=SmartHome/SequenceLight: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+SmartHome1.AvailableDevices=SmartHome/AvailableDevices: tcp -h 127.0.0.2 -p 10000 : udp -h 127.0.0.2 -p 10000
+
+SmartHome2.Camera=SmartHome/Camera: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+SmartHome2.NightCamera=SmartHome/NightCamera: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+SmartHome2.Light=SmartHome/Light: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+SmartHome2.RGBLight=SmartHome/RGBLight: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+SmartHome2.SequenceLight=SmartHome/SequenceLight: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+SmartHome2.AvailableDevices=SmartHome/AvailableDevices: tcp -h 127.0.0.3 -p 10000 : udp -h 127.0.0.3 -p 10000
+
+Ice.Warn.Connections=1
+
+Ice.ACM.Timeout=10
